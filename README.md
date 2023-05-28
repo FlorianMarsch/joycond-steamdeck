@@ -13,7 +13,8 @@ After some research i found that other had the same Problem (https://github.com/
 
 There are a few but baiscally install Joycond first! (source https://github.com/DanielOgorchock/joycond/issues/102)
 
-`sudo steamos-readonly disable
+```sh
+sudo steamos-readonly disable
 sudo pacman-key --init
 sudo pacman-key --populate archlinux
 #This may not be necessary:
@@ -31,10 +32,13 @@ yay -Sy joycond-git
 #Needed for joycon gyro support in UDP input applications:
 yay -Sy joycond-cemuhook-git
 sudo modprobe hid-nintendo
-sudo systemctl enable --now joycond`
+sudo systemctl enable --now joycond
+```
 
 ## Install
-`git clone https://github.com/FlorianMarsch/joycond-steamdeck.git
+```sh
+git clone https://github.com/FlorianMarsch/joycond-steamdeck.git
 cd joycond-steamdeck
 cp ./udev/rules.d/89-joycond.rules  usr/lib/udev/rules.d/89-joycond.rules
-sudo udevadm control --reload-rules && sudo udevadm trigger`
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
